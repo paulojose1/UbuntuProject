@@ -1,4 +1,4 @@
-#Ubuntu Server Project Journal
+# Ubuntu Server Project Journal
 
 On this assessment, we'll demonstrate our understanding of virtualization software and get familiar with develop cloud tools.
 For this assessment to work we need to install the VM VirtualBox, which is a cross-platform virtualization application. This means that we will be able to install other OSs on our system independently of which system we're using. So basically, we can install a new OS like Windows Server alongside with our applications, we can install as many as we like the only limitations are our memory and disk space. The VM is a very powerful tool yet small, it can run everywhere from small embedded systems all the way to datacenter deployments and even cloud environments.
@@ -6,7 +6,7 @@ The first step is the installation of Ubuntu on my laptop, for the Architecture 
 After the installation, I created an account on github.com and made the tutorial on how to create an open source repository, start and create a new branch, change a file and committed those changes to GitHub and open and merge a Pull Request.
 With all this done I started to install what is called LAMP stack which is short for Linux, Apache, MySQL and PHP, LAMP is an open-source web development platform, also called Web stack, that uses Linux as the operating system, Apache as the web server, MySQL as relational database management system and PHP as the object-oriented scripting language.
 
-##LAMP
+## LAMP
 
 Linux is an open source and community-developed operating system for computers, servers, mainframes and embedded devices. It is supported on almost every computer platform including x86, ARM and SPARC, making it one of the most supported operating system in the world. 
 Apache is the most popular web server software. It enables a computer to host one or more websites that can be accessed over the internet using browsers. Apache is very popular because is open source and free to use therefore, web hosting companies can offer apache based solutions at minimal cost.
@@ -14,7 +14,7 @@ MySQL is an open source database management system. It is based on the structure
 PHP stands for “Hypertext Preprocessor”. It is an HTML-embedded web scripting language. This means PHP code can be inserted into the HTML of a web page. When a PHP page is accessed, the PHP code is read by the server the page resides on. The output from PHP functions are expressed in HTML code, so the user can’t see the PHP code jus the HTML, this makes PHP scripting a secure why to script the page.
 
 
-##Installation 
+## Installation 
 
 After installing Ubuntu on VM I installed the Apache Web-Server, the first thing I needed to do was check for updates for the system, otherwise we might not be able to install the apache. I used the command “sudo apt-get upgrade”, after that I downloaded Apache using “sudo apt-get install apache2 apache2-utils” command, I needed the apache to start up at system boot so I used the systemctl enable command which is written in as “sudo systemctl enable apache2” after that I used the command “sudo systemctl start apache2” to start the service. This is where got a little tricky for me I forgot to change my network protocols settings and because of that I couldn’t see the Apache default page when I open the address localhost on my browser. I corrected this mistake after asking my teacher what I did wrong and he pointed out for me. 
 When I was done installing apache the next step was to install MySQL, I used the command “sudo apt-get install mysql-server php5-mysql”, after it was downloaded I ran a secure scrip using the “sudo mysql_secure_installation” to remove some dangerous defaults and lock down access to my database system a little bit. I was asked to enter my password for the MySQL root account then I was asked if I wanted to change my password or keep the old one, I changed it. With this done I didn’t have to change anything else so I just hit Enter and left the other parts of the program unaltered.
@@ -27,7 +27,7 @@ Now that I had my application configured, I needed to copy the Apache’s docume
 I did this changes to increase security, I wanted to give user ownership to the regular, non-root user (with sudo privileges) that I’m going to use to interact with my page. I could create a new user but I decided to use the same, just to be simpler and easier to remember as well.
 With all this done I should be able to open WordPress on my browser through the “domain” localhost/wp-admin and from there finish setting up WordPress. But it wasn’t that easy, when trying to load the page the only thing appearing on my screen was the Apache’s default page, and couldn’t figure out what was wrong. I stopped trying by myself and asked the teacher I could possibly be the problem and he gave me the solution which was a file hidden on MySQL that I should have erased, it was the info.html file, basically when loaded the page wasn’t reading the PHP file but the HTML file making the Apache default page appear on screen, once I delated that file I was able to complete the WordPress configuration and finish the project.
 
-##Conclusion 
+# Conclusion 
 
 Creating this project was a fun thing to do, it was our first real project dealing with computers, and I could finally do something palpable and it felt great. Also, now I am able to create a webserver with the confidence that it will be secure, and I can guarantee to future employers that I can manage a webserver, or at least start managing a small one and from there gather more experience. 
  
