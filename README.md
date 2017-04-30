@@ -27,7 +27,7 @@ Now that I had my application configured, I needed to copy the Apache’s docume
 I did this changes to increase security, I wanted to give user ownership to the regular, non-root user (with sudo privileges) that I’m going to use to interact with my page. I could create a new user but I decided to use the same, just to be simpler and easier to remember as well.
 With all this done I should be able to open WordPress on my browser through the “domain” localhost/wp-admin and from there finish setting up WordPress. But it wasn’t that easy, when trying to load the page the only thing appearing on my screen was the Apache’s default page, and couldn’t figure out what was wrong. I stopped trying by myself and asked the teacher I could possibly be the problem and he gave me the solution which was a file hidden on MySQL that I should have erased, it was the info.html file, basically when loaded the page wasn’t reading the PHP file but the HTML file making the Apache default page appear on screen, once I delated that file I was able to complete the WordPress configuration and finish the project.
 
-# Conclusion 
+## Conclusion 
 
 Creating this project was a fun thing to do, it was our first real project dealing with computers, and I could finally do something palpable and it felt great. Also, now I am able to create a webserver with the confidence that it will be secure, and I can guarantee to future employers that I can manage a webserver, or at least start managing a small one and from there gather more experience. 
  
